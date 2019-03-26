@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Task;
 
 class TaskListController extends Controller
 {
@@ -13,7 +14,11 @@ class TaskListController extends Controller
      */
     public function index()
     {
-        
+
+        //Get all data from database and pass data to view
+        $tasks = Task::all();
+        return view('tasks.index')->with('tasks', $tasks);
+
     }
 
     /**
