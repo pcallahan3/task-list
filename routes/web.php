@@ -12,6 +12,4 @@
 */
 
 Route::get('/', 'TaskListController@index');
-
-
 Route::resource('task', 'TaskListController');
