@@ -16,7 +16,8 @@ class TaskListController extends Controller
     {
 
         //Get all data from database and pass data to view
-        $tasks = Task::all();
+        //$tasks = Task::all();
+        $tasks = Task::orderBy('created_at', 'desc')->get();
         return view('tasks.index')->with('tasks', $tasks);
 
     }
@@ -50,7 +51,8 @@ class TaskListController extends Controller
      */
     public function show($id)
     {
-        //
+        $task = Task::find($id);
+        return view('tasks.show')->with('task', '$task');
     }
 
     /**

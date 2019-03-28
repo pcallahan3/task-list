@@ -6,13 +6,16 @@
 
         <title>Task List</title>
         <link rel="stylesheet" href="/css/app.css" >
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
         <body>
           <div class="container">
             @yield('content')
           </div>
 
-          <footer>
+          <footer id="footer" class="text-center">
             <p>Copyright &copy; 2019</p>
           </footer>
 
