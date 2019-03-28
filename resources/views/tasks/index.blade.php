@@ -1,6 +1,5 @@
 
 @extends('layouts.app')
-@include('inc.navbar')
 
 @section('content')
 <h1>Tasks</h1>

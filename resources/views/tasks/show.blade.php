@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@include('inc.navbar')
 @section('content')
   <h1><a href="task/{{$task->id}}">{{$task->text}}</a></h1>
   <div class="label label-danger">{{$task->due}}</div>

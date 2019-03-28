@@ -11,7 +11,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
         <body>
+          @include('inc.navbar')
           <div class="container">
+            @include('inc.messages')
             @yield('content')
           </div>
 
