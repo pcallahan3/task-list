@@ -52,7 +52,7 @@ class TaskListController extends Controller
     public function show($id)
     {
         $task = Task::find($id);
-        return view('tasks.show')->with('task', '$task');
+        return view('tasks.show')->with('task', $task);
     }
 
     /**
