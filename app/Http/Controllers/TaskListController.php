@@ -29,7 +29,7 @@ class TaskListController extends Controller
      */
     public function create()
     {
-        //
+        return view('tasks.create');
     }
 
     /**
