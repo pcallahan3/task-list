@@ -40,7 +40,19 @@ class TaskListController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+          'text' => 'required'
+        ]);
+
+        //Create Task
+        $task = new Task;
+        $task->text = $request->input('text');
+        $task->body = $request->input('body');
+        $task->due = $request->input('due');
+
+        $task->save();
+
+        return redirect('/')->with('success', 'Task Created');
     }
 
     /**
